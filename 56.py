@@ -4,6 +4,8 @@
 Created on Tue Nov 20 17:54:21 2018
 
 @author: khlee
+
+https://leetcode.com/problems/merge-intervals/description/
 """
 
 #Definition for an interval.

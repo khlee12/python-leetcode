@@ -4,6 +4,8 @@
 Created on Tue Nov 20 15:12:55 2018
 
 @author: khlee
+
+https://leetcode.com/problems/number-of-islands/description/
 """
 
 class Solution:
