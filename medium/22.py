@@ -22,3 +22,6 @@ class Solution:
         generate(init_p)
         result.add(init_p)
         return list(result)
+# Solution给的解法：
+# 采用递归方式，添加左括号的条件是左括号数量小于 n，添加右括号的条件是右括号数小于左括号数：
+# https://blog.csdn.net/happyaaaaaaaaaaa/article/details/51525303
