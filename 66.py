@@ -1,6 +1,32 @@
 # 66. Plus One
 # https://leetcode.com/problems/plus-one/
 
+# update 2019/2/1
+class Solution:
+    def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        if digits is None and not digits:
+            return
+        
+        plus_flag = 1
+        for i in range(len(digits)-1, -1, -1):
+            temp_sum = digits[i]+plus_flag
+            if temp_sum == 10:
+                digits[i] = 0
+                plus_flag = 1
+            else:
+                digits[i] = temp_sum
+                plus_flag = 0
+        if plus_flag == 1:
+            return [plus_flag] + digits
+        return digits
+            
+        
+    
+# first ver.
 class Solution:
     def plusOne(self, digits):
         """
