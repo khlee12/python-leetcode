@@ -1,5 +1,6 @@
 # 245. Shortest Word Distance III
 # https://leetcode.com/problems/shortest-word-distance-iii/
+# https://leetcode.com/problems/shortest-word-distance-iii/discuss/67097/12-16-lines-Java-C%2B%2B
 
 class Solution:
     def shortestWordDistance(self, words: 'List[str]', word1: 'str', word2: 'str') -> 'int':
