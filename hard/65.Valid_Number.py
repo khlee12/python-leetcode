@@ -3,7 +3,7 @@
 
 class Solution:
     def isNumber(self, s: str) -> bool:
-        # 正/整数
+        # 正/负整数
         # 正/负浮点数
         # 正/负整数e正/负整数
         # 正/负浮点数e正/负整数
