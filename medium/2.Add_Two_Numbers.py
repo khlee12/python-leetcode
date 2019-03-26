@@ -19,31 +19,27 @@ class Solution:
         if l2 is None:
             return l1
         
-        l1_pointer = l1
-        l2_pointer = l2
-        plus_flag = 0
-        result = None
-        dummy = None
-        while l1_pointer or l2_pointer:
-            l1_val = l1_pointer.val if l1_pointer else 0
-            l2_val = l2_pointer.val if l2_pointer else 0
-            temp_sum = l1_val + l2_val + plus_flag
-            plus_flag = int(temp_sum/10)
-            temp_sum = int(temp_sum%10)
-            temp_node = ListNode(temp_sum)
-
-            if result is None:
-                result = temp_node
-                dummy = result
-            else:
-                dummy.next = temp_node
-                dummy = dummy.next
-                
-            if l1_pointer:
-                l1_pointer = l1_pointer.next
-            if l2_pointer:
-                l2_pointer = l2_pointer.next
+        ptr1 = l1
+        ptr2 = l2
+        
+        flag = 0
+        dummy = ListNode(-1)
+        result = dummy
+        
+        while ptr1 or ptr2:
+            val1 = ptr1.val if ptr1 else 0
+            val2 = ptr2.val if ptr2 else 0
             
-        if plus_flag == 1:
-            dummy.next = ListNode(1)
-        return result
+            val, flag = int((val1+val2+flag)%10), (val1+val2+flag)//10
+            node = ListNode(val)
+            result.next = node
+            result = result.next
+            if ptr1:
+                ptr1 = ptr1.next
+            if ptr2:
+                ptr2 = ptr2.next
+        
+        if flag == 1:
+            result.next = ListNode(1)
+        
+        return dummy.next
