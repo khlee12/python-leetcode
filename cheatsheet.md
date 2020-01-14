@@ -12,3 +12,11 @@ for k in range(32):
       # different bit
       # do something
 ```
+
+# Dictionary
+# give the characters with count of a string
+```
+from collections import Counter
+t = 'asjdvbaku'
+_dict = Counter(t)
+```
