@@ -20,3 +20,7 @@ from collections import Counter
 t = 'asjdvbaku'
 _dict = Counter(t)
 ```
+
+# Heap
+# how to use max-heap?
+multiply value with `-1` to invert value, and use python heapq library.
