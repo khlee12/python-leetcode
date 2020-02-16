@@ -5,7 +5,7 @@ grid = [[0 for x in range(w)] for y in range(h)]
 ```
 
 # Bit
-# check each bit of an integer
+## check each bit of an integer
 ```
 for k in range(32):
   if ((a>>k)&1) != ((b>>k)&1):
@@ -14,13 +14,17 @@ for k in range(32):
 ```
 
 # Dictionary
-# give the characters with count of a string
+## give the characters with count of a string
 ```
 from collections import Counter
 t = 'asjdvbaku'
 _dict = Counter(t)
 ```
+## sort by value
+```
+{k: v for k, v in sorted(x.items(), key=lambda item: item[1])}
+```
 
 # Heap
-# how to use max-heap?
+## how to use max-heap?
 multiply value with `-1` to invert value, and use python heapq library.
