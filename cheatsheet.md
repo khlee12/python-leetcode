@@ -4,6 +4,12 @@
 grid = [[0 for x in range(w)] for y in range(h)]
 ```
 
+## traverse 2d array by column
+```
+for col in list(map(list, zip(*grid))):
+  # do something
+```
+
 # Bit
 ## check each bit of an integer
 ```
@@ -28,3 +34,28 @@ _dict = Counter(t)
 # Heap
 ## how to use max-heap?
 multiply value with `-1` to invert value, and use python heapq library.
+
+# Tree
+## Trie Tree
+```
+class TrieNode:
+    def __init__(self):
+        self.children = [None]*26
+        self.isEndOfWord = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, key):
+        pCrawl = self.root
+        length = len(key)
+        for level in range(length):
+            index = ord(key[level])-ord('a')
+            # if current character is not present
+            if not pCrawl.children[index]:
+                pCrawl.children[index] = TrieNode()
+            pCrawl = pCrawl.children[index]
+
+        pCrawl.isEndOfWord = True
+```
