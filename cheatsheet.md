@@ -19,6 +19,11 @@ for k in range(32):
       # do something
 ```
 
+## Transform integer to binary string
+```
+binaryN = "{0:b}".format(N)
+```
+
 # Dictionary
 ## give the characters with count of a string
 ```
