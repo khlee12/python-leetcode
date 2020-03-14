@@ -10,6 +10,11 @@ for col in list(map(list, zip(*grid))):
   # do something
 ```
 
+## split string to list by each char
+```
+list(_str)
+```
+
 # Bit
 ## check each bit of an integer
 ```
