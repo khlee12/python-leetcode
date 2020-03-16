@@ -45,6 +45,23 @@ _dict = Counter(t)
 ## how to use max-heap?
 multiply value with `-1` to invert value, and use python heapq library.
 
+## top-k 
+```
+import heapq
+h = []
+k = 3
+nums = [5,3,2,1,7,4,5]
+for i in range(len(nums)):
+  if len(h) < k:
+      heapq.heappush(h, nums[i])
+  else:
+      topk_small = h[0]
+      if nums[i] > topk_small:
+        heapq.heapreplace(h, nums[i])
+
+topk = [x for x in reversed([heapq.heappop(h) for x in range(len(h))])]
+```
+
 # Tree
 ## Trie Tree
 ```
