@@ -51,15 +51,14 @@ import heapq
 h = []
 k = 3
 nums = [5,3,2,1,7,4,5]
+temp_k = k+1
 for i in range(len(nums)):
   if len(h) < k:
       heapq.heappush(h, nums[i])
   else:
-      topk_small = h[0]
-      if nums[i] > topk_small:
-        heapq.heapreplace(h, nums[i])
+      heapq.heapreplace(h, nums[i])
 
-topk = [x for x in reversed([heapq.heappop(h) for x in range(len(h))])]
+topk = [x for x in reversed([heapq.heappop(h) for x in range(len(h))])][:k]
 ```
 
 # Tree
