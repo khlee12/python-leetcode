@@ -53,7 +53,7 @@ k = 3
 nums = [5,3,2,1,7,4,5]
 temp_k = k+1
 for i in range(len(nums)):
-  if len(h) < k:
+  if len(h) < temp_k:
       heapq.heappush(h, nums[i])
   else:
       heapq.heapreplace(h, nums[i])
