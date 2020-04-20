@@ -62,6 +62,14 @@ topk = [x for x in reversed([heapq.heappop(h) for x in range(len(h))])][:k]
 ```
 
 # Tree
+## Binary Tree Depth
+```
+def depth(node):
+    if node is None:
+        return 0
+    return max(depth(node.left)+depth(node.right))+1
+```
+
 ## Trie Tree
 ```
 class TrieNode:
@@ -85,3 +93,10 @@ class Trie:
 
         pCrawl.isEndOfWord = True
 ```
+
+# Review Problems
+- binary tree depth + recursion
+https://leetcode.com/problems/diameter-of-binary-tree/
+
+
+
