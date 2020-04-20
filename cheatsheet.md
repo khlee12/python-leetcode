@@ -95,8 +95,9 @@ class Trie:
 ```
 
 # Review Problems
-- binary tree depth + recursion
-https://leetcode.com/problems/diameter-of-binary-tree/
+key point|problem url
+--|--
+binary tree depth+recursion|https://leetcode.com/problems/diameter-of-binary-tree/
 
 
 
