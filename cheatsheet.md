@@ -98,6 +98,7 @@ class Trie:
 key point|problem url
 --|--
 binary tree depth+recursion|https://leetcode.com/problems/diameter-of-binary-tree/
+区间内状态不变|https://leetcode.com/problems/contiguous-array/
 
 
 
