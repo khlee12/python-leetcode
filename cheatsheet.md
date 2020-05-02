@@ -70,6 +70,25 @@ def depth(node):
     return max(depth(node.left)+depth(node.right))+1
 ```
 
+## Binary Tree Every Path
+```
+def dfs(node, path, pathLen):
+    if len(path) > pathLen:
+        path[pathLen] = str(node.val)
+    else:
+        path.append(str(node.val))
+
+    pathLen += 1
+    if node.left is None and node.right is None:
+        print(path[:pathLen]) # path from root to leaf
+
+    left=right=None
+    if node.left is not None:
+        left = dfs(node.left, path, pathLen)
+    if node.right is not None:
+        right = dfs(node.right, path, pathLen)
+```
+
 ## Trie Tree
 ```
 class TrieNode:
@@ -99,6 +118,6 @@ key point|problem url
 --|--
 binary tree depth+recursion|https://leetcode.com/problems/diameter-of-binary-tree/
 区间内状态不变|https://leetcode.com/problems/contiguous-array/
-
-
+binary search|https://leetcode.com/problems/search-in-rotated-sorted-array/
+greedy algorithm|https://leetcode.com/problems/jump-game/
 
