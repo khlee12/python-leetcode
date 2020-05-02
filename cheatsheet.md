@@ -40,6 +40,10 @@ _dict = Counter(t)
 ```
 {k: v for k, v in sorted(x.items(), key=lambda item: item[1])}
 ```
+## filtering
+```
+{k:v for k,v in d.items() if v==2}
+```
 
 # Heap
 ## how to use max-heap?
