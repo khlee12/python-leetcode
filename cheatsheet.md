@@ -117,6 +117,24 @@ class Trie:
         pCrawl.isEndOfWord = True
 ```
 
+# Graph
+## DFS
+```
+def dfs(grid, row, col, oldColor, newColor):
+  row_num = len(grid)
+  col_num = len(grid[0])
+  grid[row][col] = newColor
+
+  if row+1<row_num and grid[row+1][col]==oldColor:
+      dfs(grid, row+1, col, oldColor, newColor)
+  if row-1>-1 and grid[row-1][col]==oldColor:
+      dfs(grid, row-1, col, oldColor, newColor)
+  if col+1<col_num and grid[row][col+1]==oldColor:
+      dfs(grid, row, col+1, oldColor, newColor)
+  if col-1>-1 and grid[row][col-1]==oldColor:
+      dfs(grid, row, col-1, oldColor, newColor)
+```
+
 # Review Problems
 key point|problem url
 --|--
@@ -124,4 +142,4 @@ binary tree depth+recursion|https://leetcode.com/problems/diameter-of-binary-tre
 区间内状态不变|https://leetcode.com/problems/contiguous-array/
 binary search|https://leetcode.com/problems/search-in-rotated-sorted-array/
 greedy algorithm|https://leetcode.com/problems/jump-game/
-
+graph dfs|https://leetcode.com/problems/flood-fill/
